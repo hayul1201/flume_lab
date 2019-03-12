@@ -108,7 +108,7 @@ sqoop import --connect jdbc:mysql://localhost/loudacre --username training --pas
 9	Kara	Kohl	CA
 10	Diane	Nelson	CA
 ```
-                                                                                                   \
+               
 19/03/10 22:41:17 INFO mapreduce.Job: Running job: job_1552272159047_0006                          \
 19/03/10 22:41:52 INFO mapreduce.Job: Job job_1552272159047_0006 running in uber mode : false      \
 19/03/10 22:41:52 INFO mapreduce.Job:  map 0% reduce 0%                                            \
