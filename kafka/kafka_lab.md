@@ -37,6 +37,7 @@ weblogs
 kafka-topics --describe weblogs \
 --zookeeper localhost:2181
 ```
+
 ```
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/usr/lib/kafka/libs/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
@@ -54,6 +55,7 @@ kafka-console-producer \
 --broker-list localhost:9092 \
 --topic weblogs
 ```
+```
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/usr/lib/kafka/libs/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/usr/lib/kafka/libs/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
@@ -64,7 +66,6 @@ SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
 >test weblog entry 2
 >test weblog entry 3
 >
-
 ```
 
 5. consumer Console 실행
@@ -85,7 +86,6 @@ test weblog entry 1
 test weblog entry 1
 test weblog entry 2
 test weblog entry 3
-
 ```
 
 
