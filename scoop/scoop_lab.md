@@ -163,7 +163,7 @@ sqoop import --connect jdbc:mysql://localhost/loudacre --username training --pas
 --columns "acct_num, first_name, last_name, state" --fields-terminated-by "\t" \
 --where "state = 'CA' "   --z
 ```
-                                                                                                          \
+                                              
 19/03/10 23:10:24 INFO mapreduce.Job: Running job: job_1552272159047_0007                                 \
 19/03/10 23:11:10 INFO mapreduce.Job: Job job_1552272159047_0007 running in uber mode : false             \
 19/03/10 23:11:11 INFO mapreduce.Job:  map 0% reduce 0%                                                   \
@@ -217,6 +217,7 @@ sqoop import --connect jdbc:mysql://localhost/loudacre --username training --pas
 --where "state = 'CA' " \
 --compression-codec org.apache.hadoop.io.compress.GzipCodec
 ```
+
 19/03/10 23:13:54 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6-cdh5.7.0\
 19/03/10 23:13:54 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using\                                  d.
 19/03/10 23:13:55 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.                      \
@@ -237,7 +238,7 @@ Note: Recompile with -Xlint:deprecation for details.                            
 19/03/10 23:14:11 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.map\
 19/03/10 23:14:12 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032                           \
 19/03/10 23:14:22 INFO db.DBInputFormat: Using read commited transaction isolation                              \
-19/03/10 23:14:22 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`acct_num`), MAX(`acct_num`) FR\                                 ts` WHERE ( state = 'CA'  )
+19/03/10 23:14:22 INFO db.DataDrivenDBInputFormat: BoundingValsQuery: SELECT MIN(`acct_num`), MAX(`acct_num`) FROM\                                 accounts WHERE ( state = 'CA'  ) \
 19/03/10 23:14:22 INFO db.IntegerSplitter: Split size: 32439; Num splits: 4 from: 1 to: 129760                  \
 19/03/10 23:14:22 INFO mapreduce.JobSubmitter: number of splits:4                                               \
 19/03/10 23:14:22 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1552272159047_0008                \
