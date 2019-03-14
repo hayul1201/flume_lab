@@ -1,0 +1,21 @@
+
+order total/
+
+select o.order_id , sum(b.sum_p1) from orders o
+join (select d.order_id , sum(a.sum_p) as sum_p1
+  from order_details d
+  join ( select prod_id, sum(price) as sum_p
+         from products
+         group by prod_id
+        order by sum_p
+        limit 10
+        )a  on d.prod_id = a.prod_id
+ group by order_id
+ order by sum_p1
+ limit 3)b on b.order_id = o.order_id
+ 
+ o.order_id
+ 	o.order_id
+1	5321030
+2	6019748
+3	6648780
